@@ -24,12 +24,12 @@ client.on("message", async message => {
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "bc") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**you dont have `ADMINISTRATOR`**");
                 }
                     if(!args) {
-                        return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
+                        return message.reply("**You must type a word or phrase to send the podcast**");
                     }
-                        message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟\nمحتوى البرودكاست: \`${args}\`**`).then(m => {
+                        message.channel.send(`**Are you sure you want to send your podcast?\nPodcast content: \`${args}\`**`).then(m => {
                             m.react("✅")
                             .then(() => m.react("❌"));
 
@@ -63,12 +63,12 @@ client.on("message", async message => {
             }
             if(command == "bco") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**you dont have `ADMINISTRATOR`**");
                 }
                     if(!args) {
-                        return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
+                        return message.reply("**You must type a word or phrase to send the podcast**");
                     }
-                        message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟\nمحتوى البرودكاست: \`${args}\`**`).then(m => {
+                        message.channel.send(`**Are you sure you want to send your podcast?\nPodcast content: \`${args}\`**`).then(m => {
                             m.react("✅")
                             .then(() => m.react("❌"));
 
@@ -108,7 +108,7 @@ client.on("message", async message => {
     if(message.content == prefix + "server") {
         if(!message.channel.guild) return;
             if(!message.member.hasPermission("MANAGE_GUILD")) {
-                return message.channel.send("ليس لديك الصلآحية الكآفية . :broken_heart:");
+                return message.channel.send("You do not have kafic . :broken_heart:");
             }
 
                 let server = new Discord.RichEmbed()
